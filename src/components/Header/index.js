@@ -2,11 +2,14 @@ import React from 'react';
 import Logo from './Logo';
 import Link from 'next/link';
 import {
-  AiOutlineDribbble,
-  AiOutlineGithub,
-  AiOutlineTwitter,
-  AiOutlineLinkedin,
-} from 'react-icons/ai';
+  DribbbleIcon,
+  TwitterIcon,
+  GithubIcon,
+  LinkedinIcon,
+  SunIcon,
+  MoonIcon
+} from '../Icons';
+import { cx } from '@/utils';
 
 const Header = () => {
   return (
@@ -24,18 +27,18 @@ const Header = () => {
         </Link>
         <button>T</button>
       </nav>
-      <div>
-        <a href='https://'>
-          <AiOutlineLinkedin />
+      <div className='flex items-center'>
+        <a href='https://example.com' className='w-6 h-6 mr-4'>
+          <LinkedinIcon className=' hover:scale-125 transition-all ease duration-200' />
         </a>
-        <a href='https://'>
-          <AiOutlineTwitter />
+        <a href='https://example.com' className='w-6 h-6 mr-4'>
+          <TwitterIcon className=' hover:scale-125 transition-all ease duration-200' />
         </a>
-        <a href='https://'>
-          <AiOutlineGithub />
+        <a href='https://example.com' className='w-6 h-6 mr-4'>
+          <GithubIcon className=' hover:scale-125 transition-all ease duration-200' />
         </a>
-        <a href='https://'>
-          <AiOutlineDribbble />{' '}
+        <a href='https://example.com' className='w-6 h-6 mr-4'>
+          <DribbbleIcon className=' hover:scale-125 transition-all ease duration-200' />
         </a>
       </div>
     </header>
